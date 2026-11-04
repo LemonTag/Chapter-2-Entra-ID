@@ -1,4 +1,4 @@
-# [Title, outcome-flavored: "Investigating an Identity Attack in Entra ID"]
+#  Module 2: Investigating an Identity Attack in Entra ID
 
 ## Scenario
 An employee at Madhat Labs was incorrectly granted owner-level permissions within the tenant. The employee was later targeted by a phishing attack, allowing the attacker to steal their session token and bypass MFA to gain unauthorized access. The investigation focused on determining how the attacker gained access, what permissions were compromised, and the potential impact on the tenant.
