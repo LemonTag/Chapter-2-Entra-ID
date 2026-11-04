@@ -48,7 +48,6 @@ Objective 5 was another challenge because I didn't fully understand the instruct
 What I learned: I need to slow down, read the objectives carefully, and understand what each step is asking before jumping into the Azure Portal. I also learned that investigating isn't always straightforward, and sometimes finding the right evidence means going back and looking at things differently.
 
 ## Findings and recommendations
-What you determined, plus 2 or 3 recommendations as if you were reporting to the resource owner.
 1.Review Application Ownership: Make sure you know who has ownership of each application and verify that everyone has a legitimate reason for having those permissions.
 2.Follow Least Privilege: Avoid giving users unnecessary Owner or administrative permissions. Only grant the access they need to perform their jobs.
 
