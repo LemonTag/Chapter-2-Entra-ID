@@ -1,11 +1,9 @@
 # [Title, outcome-flavored: "Investigating an Identity Attack in Entra ID"]
 
 ## Scenario
-2 to 3 sentences. What was the situation and what question did the investigation answer? Frame it like a work ticket, not homework.
 An employee at Madhat Labs was incorrectly granted owner-level permissions within the tenant. The employee was later targeted by a phishing attack, allowing the attacker to steal their session token and bypass MFA to gain unauthorized access. The investigation focused on determining how the attacker gained access, what permissions were compromised, and the potential impact on the tenant.
 
 ## Environment
-One list: platform, services, tools, access level. Honest framing: "live multi-user Azure training tenant, Reader access."
 Live multi-user Azure training tenant
 Platform: Microsoft Azure
 Environment: Live multi-user Azure training tenant
@@ -14,7 +12,6 @@ Tools: Azure Portal, Azure Active Directory (Microsoft Entra ID)
 Access Level: Reader access
 
 ## Investigation
-The core. Numbered steps IN YOUR OWN WORDS: what you looked at, what you found, what you concluded at each step. 6 to 12 screenshots of meaningful moments (portal views, query results, before/after).
 Investigation
 1. Reviewed App Registrations
 - I opened App registrations in the Azure Portal and reviewed the registered applications. I located an application named Mad Hat Legacy Sync Service, which became the focus of my investigation.
@@ -43,10 +40,22 @@ Investigation
 
 
 ## What broke / what surprised me
-The most credible section in the document. Dead ends, wrong guesses, the thing that took an hour. Employers know real work is messy. This section separates you from certificate collectors.
+Challenges and Dead Ends
+The biggest challenge during this investigation was identifying the rogue application and understanding what Objectives 3, 4, and 5 were asking me to find. I spent a lot of time checking other registered applications because I initially thought one of them was the rogue app. I was looking for the internal notes and flags but wasn't sure which application I needed to investigate.
+
+Objective 5 was another challenge because I didn't fully understand the instructions for decoding the URL or where to find the URL within the rogue application's settings. I had to go back and reread the instructions to understand what information I needed and where to look.
+
+What I learned: I need to slow down, read the objectives carefully, and understand what each step is asking before jumping into the Azure Portal. I also learned that investigating isn't always straightforward, and sometimes finding the right evidence means going back and looking at things differently.
 
 ## Findings and recommendations
 What you determined, plus 2 or 3 recommendations as if you were reporting to the resource owner.
+1.Review Application Ownership: Make sure you know who has ownership of each application and verify that everyone has a legitimate reason for having those permissions.
+2.Follow Least Privilege: Avoid giving users unnecessary Owner or administrative permissions. Only grant the access they need to perform their jobs.
 
 ## What I learned
-3 to 5 bullets. At least one technical, one "what I'd do differently."
+What I Learned
+- I learned how rogue applications work and how attackers can make them blend in with legitimate applications to avoid detection.
+- I learned how to use CyberChef to decode URLs and uncover information that might otherwise be difficult to understand.
+- I learned how reviewing Expose an API and application owners can help identify suspicious changes and track down a rogue application.
+- I learned the importance of reviewing ownership permissions before granting someone owner access. I wouldn't make Carl an owner without verifying that he needed those permissions, and I would make sure to review all application ownerships before calling it a day.
+
