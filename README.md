@@ -41,11 +41,15 @@ Investigation
 
 ## What broke / what surprised me
 Challenges and Dead Ends
-The biggest challenge during this investigation was identifying the rogue application and understanding what Objectives 3, 4, and 5 were asking me to find. I spent a lot of time checking other registered applications because I initially thought one of them was the rogue app. I was looking for the internal notes and flags but wasn't sure which application I needed to investigate.
+The biggest challenge during this investigation was identifying the rogue application and understanding what Objectives 3, 4, and 5 were asking me to find. I spent a lot of time checking other registered applications because I initially thought one of them was the rogue app. I was searching for the internal notes and flags but wasn't sure which application I needed to investigate.
 
-Objective 5 was another challenge because I didn't fully understand the instructions for decoding the URL or where to find the URL within the rogue application's settings. I had to go back and reread the instructions to understand what information I needed and where to look.
+Objective 4: Persistence with Exposed API was particularly difficult. I had a hard time understanding what I was looking at in the Azure Portal and what the flag was hinting at regarding how the attacker could maintain access to the tenant.
 
-What I learned: I need to slow down, read the objectives carefully, and understand what each step is asking before jumping into the Azure Portal. I also learned that investigating isn't always straightforward, and sometimes finding the right evidence means going back and looking at things differently.
+Objective 5 was another challenge because I didn't fully understand the instructions for decoding the URL or where to find it within the rogue application's settings. I had to go back and reread the instructions to understand what information I needed and where to look.
+
+What I Learned:
+
+I need to slow down, read the objectives carefully, and understand what each step is asking before jumping into the Azure Portal. I also learned that investigations aren't always straightforward. Sometimes finding the right evidence means going back, reviewing what I've already looked at, and approaching the problem from a different perspective.
 
 ## Findings and recommendations
 1.Review Application Ownership: Make sure you know who has ownership of each application and verify that everyone has a legitimate reason for having those permissions.
